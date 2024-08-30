@@ -206,31 +206,3 @@ function finishQuiz() {
 
 
 
-// Q4
-// function nextQuestion4(){
-//     const quizContainer3 = document.getElementById('quizContainer3')
-//     const quizcontainer4 = document.getElementById('quizcontainer4')
-    
-//     quizContainer3.style.display = 'none';
-//     quizcontainer4.style.display = 'block';
-
-//     const question4 = Question[4];
-
-//     let html = '<h2>'+ question4.Question +'</h2>'
-    
-//     for (let key in question4.Options){
-//     html = html +'<p>' + key + ':' + question4.options[key] +
-//     ' <button onclick ="selectAnswer4(\'' + key + '\',this)">✔️</button></p>';
-//     }
-//     quizcontainer4.innerHTML = html;
-// }
-//   function selectAnswer4(selectedKey,buttonElement){
-//    const question4 =Questions[4];
-//    const correctAnswer = question4.correctAnswer;
-//    if(selectedKey === question4.CorrectAnswer){
-
-//     buttonElement.parentElement.style.backgroundColor = 'green';
-//    } else {
-//     buttonElement.parentElement.style.backgroundColor = 'red';
-//    }
-//   }

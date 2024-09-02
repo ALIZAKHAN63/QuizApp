@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #434343, #2c3e50); 
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#startcontainer, #resultscontainer {
+    text-align: center;
+}
+
+#startbutton {
+    padding: 15px 40px;
+    border: none;
+    background-color: #1abc9c; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#startbutton:hover {
+    background-color: #16a085; 
+    transform: translateY(-3px); 
+}
+
+#quizcontainer {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    color: #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.option {
+    background: #ecf0f1; 
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option:hover {
+    background: #bdc3c7; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option.correct {
+    background-color: #27ae60; 
+    color: white;
+}
+
+.option.incorrect {
+    background-color: #c0392b; 
+    color: white;
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    background-color: #2980b9; 
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f618d; 
+    transform: translateY(-3px); 
+}

@@ -48,5 +48,5 @@ const Questions = [
             D: "unshift()"
         },
         CorrectAnswer: "A"
-    },    
+    },
 ];

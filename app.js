@@ -1,10 +1,12 @@
 let currentQuestionIndex = 0;
 let correctAnswersCount = 0;
+let answerSelected = 0;
 
 function startQuiz() {
     document.getElementById('startcontainer').style.display = 'none';
     document.getElementById('quizcontainer').style.display = 'block';
     displayQuestion(currentQuestionIndex);
+    startTimer();
 }
 
 function displayQuestion(index) {
@@ -25,6 +27,7 @@ function displayQuestion(index) {
     }
 
     quizContainer.innerHTML = html;
+    answerSelected = false;
 }
 
 function selectAnswer(selectedKey, optionElement) {
@@ -37,16 +40,22 @@ function selectAnswer(selectedKey, optionElement) {
     } else {
         optionElement.style.backgroundColor = '#FF6347';
     }
+    answerSelected = true; 
 }
 
 function nextQuestion() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex <= Questions.length) {
-        displayQuestion(currentQuestionIndex);
+    if (answerSelected) { 
+        currentQuestionIndex++;
+        if (currentQuestionIndex <= Questions.length) {
+            displayQuestion(currentQuestionIndex);
+        }
+    } else {
+        alert('Please select an answer before proceeding!');
     }
 }
 
 function finishQuiz() {
+    clearInterval(timer); 
     const totalQuestions = Questions.length;
     const resultsContainer = document.getElementById('resultscontainer');
     const quizContainer = document.getElementById('quizcontainer');
@@ -58,4 +67,18 @@ function finishQuiz() {
         '<p>You answered ' + correctAnswersCount +
         ' out of ' + totalQuestions +
         ' questions correctly.</p>';
+}
+//  timer 
+let timer;
+let sec = 60;
+function startTimer() {
+    timer = setInterval(function() {
+        document.getElementById('timer').innerHTML = sec + " sec left";
+        sec--;
+
+        if (sec < 0) {
+            clearInterval(timer);
+            finishQuiz(); 
+        }
+    }, 1000); 
 }

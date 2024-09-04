@@ -90,3 +90,45 @@ button:hover {
     background-color: #1f618d; 
     transform: translateY(-3px); 
 }
+
+
+#timer-container {
+    position: fixed; 
+    top: 100px; 
+    right: 10px; 
+    font-size: 30px; 
+}
+
+/* quiz app responsive */
+
+@media (max-width: 600px) {
+    #startbutton {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+
+    #quizcontainer {
+        max-width: 85%;
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .option {
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+
+    #timer-container {
+        font-size: 24px;
+        top: 80px; 
+        right: 50px; 
+    }
+}

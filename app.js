@@ -68,7 +68,9 @@ function finishQuiz() {
         ' out of ' + totalQuestions +
         ' questions correctly.</p>';
 }
-//  timer 
+//  timer function
+
+
 let timer;
 let sec = 60;
 function startTimer() {
